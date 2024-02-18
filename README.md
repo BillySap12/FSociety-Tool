@@ -1,7 +1,7 @@
 # FSociety-Tool
 
 This tool is a tool made in Python. This tool lets you do various stuff, such as: IP Lookup, Hashing, using nmap, DoS, HTTP Flood, "Doxxing", Client-Client socket chat, and a reverse shell.
-Please note that this tool was made for education purposes only and has no intend into harming anyone. Even if you do use this tool for malicious purposes, I am not liable for anything you do, like mentioned in the license.
+Please note that this tool was made for education purposes only and has no intend into harming anyone. Even if you do use this tool for malicious purposes, I am not liable for anything you do, like mentioned in the license. If you like this tool, please star it, it really means a lot to me. Thanks.
 
 Also, make sure to have Python installed on your system.
 
@@ -20,13 +20,26 @@ Now run the program by doing ``python3 main.py``.
 # Windows & MacOS
 
 For Windows or Mac, go to the repository (https://github.com/BillySap12/FSociety-Tool). 
+
 There should be a green button that says "Code". 
+
 Click on it, and then press the "Download ZIP" button. 
+
 Wait for it to download.
+
 Once it has downloaded, go to the directory where it was downloaded.
 Extract all of it's components.
+
 Open your cmd, and write the following: ``cd path/where/the/zip/got/downloaded``.
+
 Once you have done that, run: ``pip install -r requirements.txt``.
+
 Wait for them to download.
+
 Now, go back to your File Explorer, and double click on the ``main.py`` file. 
+
 That should run the program.
+
+# Disclaimer
+
+As I mentioned above, this tool was made for educational purposes only and was not intended to cause any harm. Even if you do try to cause any harm, I am not liable for anything you do, as mentioned in the license. I hope that you will use it for ethical reasons. 
