@@ -47,6 +47,8 @@ That should run the program.
 
 I recommend you to use Linux, in particular Kali Linux, but it should work fine on almost all other OSes.
 
+I also recommend Python version 3.11, or version 3.11.5. I don't recommend anything over or lower than that.
+
 # Disclaimer
 
 As I mentioned above, this tool was made for educational purposes only and was not intended to cause any harm. Even if you do try to cause any harm, I am not liable for anything you do, as mentioned in the license. I hope that you will use it for ethical reasons. 
