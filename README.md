@@ -35,6 +35,8 @@ Extract all of it's components.
 
 Open your cmd, and write the following: ``cd path/where/the/zip/got/downloaded``.
 
+Also, make sure you have Python installed on your computer. The recommended version is 11.0 or 11.5
+
 Once you have done that, run: ``pip install -r requirements.txt``.
 
 Wait for them to download.
