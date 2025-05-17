@@ -11,7 +11,7 @@ import random
 import sys
 from colorama import Fore, Style
 
-print(Fore.LIGHTCYAN_EX + '''
+print(Fore.LIGHTCYAN_EX + r'''
  ________ ________  ________  ________  ___  _______  _________    ___    ___ 
 |\  _____\\   ____\|\   __  \|\   ____\|\  \|\  ___ \|\___   ___\ |\  \  /  /|
 \ \  \__/\ \  \___|\ \  \|\  \ \  \___|\ \  \ \   __/\|___ \  \_| \ \  \/  / /
